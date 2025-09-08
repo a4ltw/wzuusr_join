@@ -1,0 +1,191 @@
+/* General Body Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Sections */
+section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+/* Containers for content */
+#poster-container,
+#presentation-container,
+#video-container,
+#pdf-container {
+    margin-top: 1rem;
+    min-height: 300px; /* Placeholder height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    main {
+        margin: 1rem auto;
+        padding: 0 10px;
+    }
+}
+
+/* PDF Viewer */
+.pdf-viewer {
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+}
+.pdf-viewer h3 {
+    margin-top: 0;
+}
+.pdf-viewer a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.pdf-viewer a:hover {
+    background-color: #004494;
+}
+
+/* Video Links */
+.video-links {
+    list-style-type: '🔗';
+    padding-left: 2rem;
+}
+.video-links li {
+    margin-bottom: 0.5rem;
+}
+
+/* Lightbox for image zoom */
+#lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#lightbox.visible {
+    display: flex; /* Make visible */
+}
+
+#lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+/* Adjusting iframe containers */
+#presentation-container, .video-container {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    min-height: auto; /* Reset min-height */
+}
+
+/* Responsive Video Container */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 2rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#play-btn {
+    display: block;
+    margin: -1rem auto 2rem auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #c00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#play-btn:hover {
+    background-color: #a00;
+}
+
+/* Footer link */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
+}
