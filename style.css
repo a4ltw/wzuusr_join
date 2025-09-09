@@ -16,6 +16,25 @@ header {
     text-align: center;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-logo-inline {
+    height: 1.5em; /* Scales with font size */
+    margin: 0 0.5em;
+}
+
 header h1 {
     margin: 0;
     font-size: 2rem;
@@ -71,7 +90,7 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
+    header h1, .header-content h1 {
         font-size: 1.5rem;
     }
     main {
@@ -188,4 +207,25 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
+}
+
+/* More Info Section */
+#moreinfo {
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+#moreinfo h2 {
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    font-size: 2.5rem;
+    margin: 0 15px;
+    color: #495057;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff; /* A generic blue, can be customized */
 }
