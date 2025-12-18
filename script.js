@@ -40,3 +40,34 @@ function zoomImageOut() {
     lightbox.classList.remove('visible');
     document.getElementById('lightbox-image').src = ''; // Clear image
 }
+
+// Presentation Slideshow
+let currentSlide = 0;
+const totalSlides = 18;
+
+function changeSlide(direction) {
+    currentSlide += direction;
+
+    // Loop around
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    }
+
+    // Update image source
+    const slideImage = document.getElementById('presentation-slide');
+    slideImage.src = `assets/output-page-${currentSlide}.jpg`;
+
+    // Update counter
+    document.getElementById('current-slide').textContent = currentSlide + 1;
+}
+
+// Keyboard navigation for slides
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowLeft') {
+        changeSlide(-1);
+    } else if (event.key === 'ArrowRight') {
+        changeSlide(1);
+    }
+});

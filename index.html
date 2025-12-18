@@ -17,7 +17,7 @@
                 <span>鏈結世界心</span>
             </h1>
         </div>
-        <h2>114-1 🔥 火熱開課</h2>
+        <h2>114-2 🔥 火熱開課</h2>
     </header>
     <main>
         <section id="link-section">
@@ -32,8 +32,8 @@
             <p>加入小螺絲釘團隊，與我們一同以熱情回應世界與台灣社會的真實需求！</p>
             <p>團隊用心規劃：</p>
             <ul>
-                <li>🌹一門 4 學分深碗課程（代碼： 1144 ）</li>
-                <li>🌹一門 1 學分微型課程（代碼： 1160 ）</li>
+                <li>🌹 4 學分深碗課程（代碼： 1030 ）</li>
+                <li>🌹 1 學分微型課程（代碼： 1034 ）</li>
             </ul>
             <p>第二次加退選時間：2025.09.08-09.15</p>
             <h3>課程特色：</h3>
@@ -44,20 +44,35 @@
                 <li>做中學、實務經驗。</li>
                 <li>邁向世界公民之路!</li>
             </ul>
-            <p>小螺絲釘 114-1 課程 FB 連結： <a href="https://reurl.cc/9noGmX" target="_blank">https://reurl.cc/9noGmX</a></p>
+            <p>小螺絲釘 114-2 課程 FB 連結： <a href="https://reurl.cc/9noGmX" target="_blank">https://reurl.cc/9noGmX</a></p>
         </section>
         <section id="poster-section">
             <h2>宣傳海報</h2>
             <div id="poster-container">
-                <img src="assets/poster.jpg" alt="WZU USR 宣傳海報" style="max-width: 100%; height: auto; cursor: pointer;" onclick="zoomImage(this)">
+                <img src="assets/poster.png" alt="WZU USR 宣傳海報" style="max-width: 100%; height: auto; cursor: pointer;" onclick="zoomImage(this)">
             </div>
         </section>
         <section id="presentation-section">
             <h2>課程介紹</h2>
-            <div class="pdf-viewer">
+            <div class="presentation-viewer">
                 <h3>課程介紹簡報</h3>
-                <iframe src="assets/course_presentation.pdf#view=FitH" width="100%" height="500px"></iframe>
-                <a href="assets/course_presentation.pdf" download>下載課程介紹簡報</a>
+                <div class="slideshow-container">
+                    <div class="slide-controls">
+                        <button class="prev-btn" onclick="changeSlide(-1)">&#10094; 上一頁</button>
+                        <span class="slide-counter">
+                            <span id="current-slide">1</span> / <span id="total-slides">18</span>
+                        </span>
+                        <button class="next-btn" onclick="changeSlide(1)">下一頁 &#10095;</button>
+                    </div>
+                    <div class="slides-wrapper">
+                        <img id="presentation-slide" src="assets/output-page-0.jpg" alt="課程簡報" onclick="zoomImage(this)">
+                    </div>
+                </div>
+                <div class="download-section">
+                    <a href="assets/course_presentation_new.pdf" download class="download-btn">
+                        <i class="fas fa-download"></i> 下載完整簡報 PDF
+                    </a>
+                </div>
             </div>
         </section>
         <section id="testimony">
@@ -82,12 +97,12 @@
         <section id="curriculum-section">
             <h2>課程課綱</h2>
             <div class="pdf-viewer">
-                <h3>深碗課程 (4學分)</h3>
+                <h3>深碗課程 (4學分)（1142課網製作中，完成後更新）</h3>
                 <iframe src="assets/deep_bowl_syllabus.pdf" width="100%" height="500px"></iframe>
                 <a href="assets/deep_bowl_syllabus.pdf" download>下載深碗課程大綱</a>
             </div>
             <div class="pdf-viewer">
-                <h3>微型課程 (1學分)</h3>
+                <h3>微型課程 (1學分)（1142課網製作中，完成後更新）</h3>
                 <iframe src="assets/micro_course_syllabus.pdf" width="100%" height="500px"></iframe>
                 <a href="assets/micro_course_syllabus.pdf" download>下載微型課程大綱</a>
             </div>
